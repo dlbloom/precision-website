@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Precision Construction Home page</title>
+
+<link href="precision.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<tr>
+        <td width="342" height="168">&nbsp;</td>
+</tr>
+
+  <table width="660" height="75" border="0" align="center">
+    <!--DWLayoutTable-->
+      <tr>
+      <td width="306" height="22">&nbsp;</td>
+      <td width="180">&nbsp;</td>
+      <td width="152">&nbsp;</td>
+      <td width="4" rowspan="2"></td>
+    </tr>
+    <tr>
+      <td height="13"></td>
+      <td></td>
+      <td rowspan="2" align="right" valign="bottom" class="padded_cell"><span class="style2"><a href="About_Us.html">ABOUT US </a> </span><span class="style1"><br />
+      </span><span class="style2"><a href="Contact_Us.html">CONTACT US </a></span> </td>
+    </tr>
+    <tr>
+      <td height="32" valign="top" class="padded_cell3"><img src="images/home/logo.gif" width="308" height="19" align="top" /></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <table class="picture2" table width="100%" height="54" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#e1e1e1"></
+   <tr>
+    <th width="205" height="55">&nbsp;</th>
+    <th width="671" valign="top">
+	
+	<table width="648" border="0" align="center" cellpadding="0" cellspacing="0" >
+      <tr>
+        <td width="342" height="165" nowrap="nowrap" class="rotating_image">
+		
+		<script language="JavaScript1.2">
+			/***********************************************
+			* Fade-in image slideshow script- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+			* This notice MUST stay intact for legal use
+			* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+			***********************************************/
+			
+			var slideshow_width='648px' //SET IMAGE WIDTH
+			var slideshow_height='165px' //SET IMAGE HEIGHT
+			var pause=4000 //SET PAUSE BETWEEN SLIDE (3000=3 seconds)
+			
+			var fadeimages=new Array()
+			//SET 1) IMAGE PATHS, 2) optional link, 3), optional link target:
+			fadeimages[0]=["images/home/img01.jpg", "", ""]
+			fadeimages[1]=["images/home/img02.jpg", "", ""]
+			fadeimages[2]=["images/home/img03.jpg", "", ""]
+			fadeimages[3]=["images/home/img04.jpg", "", ""]
+			////NO need to edit beyond here/////////////
+			
+			var preloadedimages=new Array()
+			for (p=0;p<fadeimages.length;p++){
+			preloadedimages[p]=new Image()
+			preloadedimages[p].src=fadeimages[p][0]
+			}
+			
+			var ie4=document.all
+			var dom=document.getElementById
+			
+			if (ie4||dom)
+			document.write('<div style="position:relative;width:'+slideshow_width+';height:'+slideshow_height+';overflow:hidden"><div  id="canvas0" style="position:absolute;width:'+slideshow_width+';height:'+slideshow_height+';top:0;left:0;filter:alpha(opacity=10);-moz-opacity:10"></div><div id="canvas1" style="position:absolute;width:'+slideshow_width+';height:'+slideshow_height+';top:0;left:0;filter:alpha(opacity=10);-moz-opacity:10;visibility: hidden"></div></div>')
+			else
+			document.write('<img name="defaultslide" src="'+fadeimages[0][0]+'">')
+			
+			var curpos=10
+			var degree=10
+			var curcanvas="canvas0"
+			var curimageindex=0
+			var nextimageindex=1
+			
+			function fadepic(){
+			if (curpos<100){
+			curpos+=10
+			if (tempobj.filters)
+			tempobj.filters.alpha.opacity=curpos
+			else if (tempobj.style.MozOpacity)
+			tempobj.style.MozOpacity=curpos/101
+			}
+			else{
+			clearInterval(dropslide)
+			nextcanvas=(curcanvas=="canvas0")? "canvas0" : "canvas1"
+			tempobj=ie4? eval("document.all."+nextcanvas) : document.getElementById(nextcanvas)
+			tempobj.innerHTML=insertimage(nextimageindex)
+			nextimageindex=(nextimageindex<fadeimages.length-1)? nextimageindex+1 : 0
+			var tempobj2=ie4? eval("document.all."+nextcanvas) : document.getElementById(nextcanvas)
+			tempobj2.style.visibility="hidden"
+			setTimeout("rotateimage()",pause)
+			}
+			}
+			
+			function insertimage(i){
+			var tempcontainer=fadeimages[i][1]!=""? '<a href="'+fadeimages[i][1]+'" target="'+fadeimages[i][2]+'">' : ""
+			tempcontainer+='<img src="'+fadeimages[i][0]+'" border="0">'
+			tempcontainer=fadeimages[i][1]!=""? tempcontainer+'</a>' : tempcontainer
+			return tempcontainer
+			}
+			
+			function rotateimage(){
+			if (ie4||dom){
+			resetit(curcanvas)
+			var crossobj=tempobj=ie4? eval("document.all."+curcanvas) : document.getElementById(curcanvas)
+			crossobj.style.zIndex++
+			tempobj.style.visibility="visible"
+			var temp='setInterval("fadepic()",50)'
+			dropslide=eval(temp)
+			curcanvas=(curcanvas=="canvas0")? "canvas1" : "canvas0"
+			}
+			else
+			document.images.defaultslide.src=fadeimages[curimageindex][0]
+			curimageindex=(curimageindex<fadeimages.length-1)? curimageindex+1 : 0
+			}
+			
+			function resetit(what){
+			curpos=10
+			var crossobj=ie4? eval("document.all."+what) : document.getElementById(what)
+			if (crossobj.filters)
+			crossobj.filters.alpha.opacity=curpos
+			else if (crossobj.style.MozOpacity)
+			crossobj.style.MozOpacity=curpos/101
+			}
+			
+			function startit(){
+			var crossobj=ie4? eval("document.all."+curcanvas) : document.getElementById(curcanvas)
+			crossobj.innerHTML=insertimage(curimageindex)
+			rotateimage()
+			}
+			
+			if (ie4||dom)
+			window.onload=startit
+			else
+			setInterval("rotateimage()",pause)
+		</script>
+		
+		</td>
+      </tr>
+    </table>
+	
+	</th>
+    <th width="211">&nbsp;</th>
+  </tr>
+</table>
+  <table width="421" align="center">
+    <!--DWLayoutTable-->
+    <tr>
+      <td width="6" height="20">&nbsp;</td>
+      <td width="399" align="center" valign="top"><a href="our_advantage.html">OUR ADVANTAGE </a><img src="images/spacer.gif" width="25" height="1" /> <span class="style3">|</span><img src="images/spacer.gif" width="25" height="1" />  <a href="Construction.html">CONSTRUCTION</a>  <span class="style3"><img src="images/spacer.gif" width="25" height="1" />|<img src="images/spacer.gif" width="25" height="1" /></span><a href="condominium.html">CONDOMINIUMS</a></td>
+    </tr>
+  </table>
+</div>
+</div>
+<table width="421" border="0" align="center" cellpadding="0" cellspacing="0">
+  <!--DWLayoutTable-->
+ 
+  <tr>
+    <td width="29" height="45">&nbsp;</td>
+    <td width="364">&nbsp;</td>
+    <td width="28">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="147">&nbsp;</td>
+    <td align="center" valign="top"><p align="justify">Welcome to Precision  Construction, Portland&rsquo;s leader in general contracting, church construction,  retail construction, public and private construction, and condominium  remodeling and renovation.&nbsp; From large  scale, high-end residential structures to computer clean-room facilities to  restaurants and churches, we do it all.&nbsp;  And we do it with precision.</p></td>
+  <td>&nbsp;</td>
+  </tr>
+</table>
+<table width="660" align="center" border="0" cellpadding="0" cellspacing="0">
+  <!--DWLayoutTable-->
+  <tr>
+    <td width="655" height="32" align="center" valign="top">8025 NE Killingsworth Street,&nbsp;&nbsp;&nbsp;  Portland, &nbsp;&nbsp;OR&nbsp;&nbsp; 97218&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp; <strong>Phone:</strong> 503-253-4827,&nbsp; &nbsp;&nbsp;<strong>Fax:</strong> 503-253-5177&nbsp;&nbsp; &nbsp;or&nbsp;&nbsp;&nbsp; 971-230-0110 </td>
+    <td width="5"></td>
+  </tr>
+</table>
+</body>
+</html>
