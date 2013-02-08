@@ -1,8 +1,53 @@
-span{font-size: 16pt; text-transform: capitalize; }
-h1{color: #e81f2b; font-size: 24pt; text-transform: capitalize; font-family: Verdana
+ul{ 
+	list-style: none;
+	float: right;
+	font-family: Verdana;
+	font-size: 12pt;
+	margin-right: 20px;
+
 }
 
-p{font-size: 10pt; text-transform: capitalize; font-family: Verdana}
+li{
+	display:inline;
+	padding-left: 10px;
+	padding-right: 10px;
+}
 
-.employee {font-size: 12pt; color: #e81f2b; text-transform: capitalize; font-family: Verdana; font-weight: bold 
+h1{
+	color: #e81f2b; 
+	font-size: 24pt; 
+	text-transform: 
+	capitalize; 
+	font-family: Verdana;
+	margin: 30px;
+	padding-top: 15px;
+}
+
+p{
+	font-size: 10pt; 
+	text-transform: 
+	capitalize; 
+	font-family: Verdana;
+	margin-left: 30px;
+}
+
+.texttop {
+	vertical-align:text-top;
+}
+.employee-name {
+	font-size: 12pt; 
+	color: #e81f2b; 
+	text-transform: capitalize; 
+	font-family: Verdana; 
+	font-weight: bold;
+	float: inline; 
+
+}
+
+.employee-pic {
+	padding: 10px 0px 10px 0px;
+
+}
+
+.address {font-size: 8pt; font-family: Verdana; text-align: center
 }
